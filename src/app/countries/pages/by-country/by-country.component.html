@@ -4,13 +4,13 @@
 <div class="row">
 	<div class="col">
 		<!-- SearchBox -->
-		<app-search-box (onValue)="searchByCountry($event)" placeholder="Buscar por país"></app-search-box>
+		<app-search-box [initialValue]="initialValue" (onDebounce)="searchByCountry($event)" placeholder="Buscar por país" />
 	</div>
 </div>
 
 <div class="row">
 	<div class="col">
 		<hr>
-		<app-countries-table [countries]="countries"></app-countries-table>
+		<app-countries-table [countries]="countries" />
 	</div>
 </div>
